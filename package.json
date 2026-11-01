@@ -1,0 +1,50 @@
+{
+  "name": "agent-baton",
+  "version": "0.6.0",
+  "description": "One local memory for all your coding agents (Claude Code, Codex, opencode), plus handoff when one runs out of quota.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ForeverMJ/agent-baton.git"
+  },
+  "homepage": "https://github.com/ForeverMJ/agent-baton#readme",
+  "bugs": {
+    "url": "https://github.com/ForeverMJ/agent-baton/issues"
+  },
+  "type": "module",
+  "bin": {
+    "baton": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.js",
+    "!dist/test",
+    "docs"
+  ],
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "test": "tsc -p tsconfig.json && node --test \"dist/**/*.test.js\"",
+    "prepack": "tsc -p tsconfig.json"
+  },
+  "keywords": [
+    "claude-code",
+    "codex",
+    "opencode",
+    "coding-agent",
+    "ai-agent",
+    "memory",
+    "shared-memory",
+    "mcp",
+    "handoff",
+    "context",
+    "wsl"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
